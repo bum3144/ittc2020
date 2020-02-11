@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS box-sizing 01</title>
+    <style>
+        div{
+            border: 10px solid black;
+            width: 200px; height: 200px;
+            margin: 10px; padding: 10px;            
+        }
+        div:first-child{
+            background-color: red;
+            border-style: dotted;
+            border-radius: 20px 20px 0 50px;
+        }
+        div:last-child{
+            background-color: blue;
+            border-style: dashed;
+        }
+
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+</body>
+</html>
