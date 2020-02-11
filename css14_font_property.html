@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS font</title>
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+
+    <style>
+        .button{
+            width: 150px;
+            height: 100px;
+            border: 10px solid gray;
+            background-color: orange;
+            border-radius: 30px;
+            box-shadow: 5px 5px 5px #228B22;
+        }
+        .font_big { font-size: 2em; }
+        .font_italic { font-style: italic; }
+        .font_bold { font-weight: bold; }
+        .font_center { text-align: center; }
+
+        div > a {
+            display: block;
+            line-height: 100px;
+            text-decoration: none;
+        }
+
+        .button:hover{
+            background-color: lawngreen;
+        }
+        .button:active{
+            background-color: red;
+            box-shadow: 5px 5px 5px orange;
+        }
+        .font_family{
+            font-family: 'Lobster', cursive;
+        }
+    </style>
+</head>
+<body>
+    <div class="button">
+        <a href="#" class="font_big font_italic font_bold font_center font_family">click</a>
+    </div>
+</body>
+</html>
