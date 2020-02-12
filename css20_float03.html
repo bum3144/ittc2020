@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 float 03 - simple layout</title>
+    <style>
+        body{
+            width: 960px;
+            margin: 0 auto;
+        }
+        #aside{
+            width: 200px;
+            float: left;
+        }
+        #section{
+            width: 760px;
+            float: left;
+        }
+        #wrap{
+            overflow: hidden;
+        }
+        #title{
+            text-shadow: 10px 10px 10px yellow; 
+        }
+    </style>
+</head>
+<body>
+  <div id="header">
+      <h1 id="title">Header</h1>
+  </div> 
+  <div id="navigation">
+      <h1>Navigation</h1>
+  </div> 
+  <div id="wrap">
+    <div id="aside">
+        <h1>Aside</h1>
+        <p>Senate Majority Leader Mitch McConnell, R-Ky., and Senate Minority Leader Chuck Schumer, D-N.Y., had differing views on the impact of President Trump's impeachment acquittal on Tuesday, each claiming victory for their own party.
+
+            Democrats have suffered a series of damaging political losses over the past several weeks, McConnell said while speaking with reporters on Capitol Hill.
+            
+            “I do think the Democrats had a really bad experience the last three weeks," he said. "I think you'd have to conclude from this episode, that we won and they lost. Now that is not to say what the long-term impact will be. I think there are many things that will occur between now and the fall."</p>
+            
+        <p>Senate Majority Leader Mitch McConnell, R-Ky.</p>
+    </div>
+    <div id="section">
+        <h1>Section</h1>
+        <p>Senate Majority Leader Mitch McConnell, R-Ky., and Senate Minority Leader Chuck Schumer, D-N.Y., had differing views on the impact of President Trump's impeachment acquittal on Tuesday, each claiming victory for their own party.
+
+        Democrats have suffered a series of damaging political losses over the past several weeks, McConnell said while speaking with reporters on Capitol Hill.
+        
+        “I do think the Democrats had a really bad experience the last three weeks," he said. "I think you'd have to conclude from this episode, that we won and they lost. Now that is not to say what the long-term impact will be. I think there are many things that will occur between now and the fall."</p>
+        
+    <p>Senate Majority Leader Mitch McConnell, R-Ky.</p>
+    </div>
+  </div>
+  <div if="footer">
+      <h1>Footer</h1>
+  </div>
+</body>
+</html>
