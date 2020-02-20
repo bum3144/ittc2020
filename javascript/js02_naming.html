@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js02 - Naming convention (rule)</title>
+</head>
+<body>
+    <script>
+    "use strict"
+    var $test, _test, test, $1234, t1234; // (O)
+    // var 123, 1test; // (X)
+    
+    // 01.
+    // ! : not (T -> F, F -> T)
+    var t1 = true;
+    console.log(!t1);
+
+    // && : and (T && T => T , T && F => F , F && T => F , F && F => F)
+    console.log("==== and(&&) ====");
+    console.log("and: T && T => ", true && true);
+    console.log("and: T && F => ", true && false);
+    console.log("and: F && T => ", false && true);
+    console.log("and: F && F => ", false && false);
+
+    // || : or (T || T => T, T || F => T, F || T => T, F || F => F)
+    console.log("==== or(||) ====");
+    console.log("or: T || T => ", true || true);
+    console.log("or: T || F => ", true || false);
+    console.log("or: F || T => ", false || true);
+    console.log("or: F || F => ", false || false);   
+   
+    console.log("=============");
+    var a = 10;
+    var b = 20;
+    console.log(a);    
+    a += b; // a = a + b;
+    console.log(a);
+
+    console.log("=============");
+    var x = 20;
+    var y = 30;
+
+    
+    console.log(x = y);
+    console.log(x == y); //?
+    console.log(20 === '20'); //type check
+
+    console.log('==== typeof ====');
+    console.log(typeof y);  // number
+    console.log(typeof "20"); // string
+    console.log(typeof "JEREMY"); // string
+    console.log(typeof 3.14); // number
+    console.log(typeof true); // boolean    
+    console.log(typeof false); // boolean
+    console.log(typeof [90,20,30]); //object
+    console.log(typeof {name: 'jeremy', age: 20}); //object
+    console.log(typeof function(){}); // function
+
+    console.log('================');    
+    var ok;
+    console.log(ok);
+    
+    // ( condition ) ? A : B; // Teranary operator
+    var name = 'john';
+    console.log( name == 'john' ? "Ok" : "No");
+
+    // Prefix Increment operator, Prifix Decrement Operator
+    // ++x => x = x + 1
+    // --x => x = x - 1
+    var num = 3;
+    var sum = ++num + ++num + ++num; // sum = 4 + 5 + 6
+    console.log(num, sum); // 6 , 15 
+
+    var num2 = 10;
+    var min = --num2 + --num2 + --num2; // min = 9 + 8 + 7
+    console.log(num2, min); // 7, 24
+
+    // Postfix Increment , Postfix Decrement
+    var post = 3;
+    // post = post + 1
+    var psum = post++ + post++ + post++ // 3 + 4 + 5
+    console.log(post, psum); // 6, 12
+
+    console.log('================'); 
+    var v1 = 3;
+    v1 = v1++;
+    console.log(v1);
+
+    var v2 = 3;
+    v2 = ++v2;
+    console.log(v2);
+    </script>
+</body>
+</html>
