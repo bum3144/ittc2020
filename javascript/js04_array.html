@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js04 Array, Loop</title>
+</head>
+<body>
+    <h1>Array and Loop</h1>
+
+    <script>
+        "use strict"
+        // Array
+        // [value, value, value]
+        // new Array(value, value, value)
+
+        var scores = [100, 90, 75, 80];
+        //              0   1   2   3
+        console.log(scores);
+        console.log(scores[0]); // 100
+        console.log(scores[3]); // 80
+        console.log(scores[1],scores[2]); // 90 75
+        console.log(scores[4]); // undefined
+        console.log(scores.length); // 4
+
+        // prototype
+        // Array.proteotype.pop(); -> Array.pop();
+        // pop() - take the last value and remove.
+        console.log("===== pop() =====");
+        console.log(scores.pop()); // 80
+        console.log(scores);
+        console.log(scores.pop()); // 75
+        console.log(scores);
+        console.log(scores.pop()); // 90
+        console.log(scores);
+
+        // push() - add value
+        console.log("===== push() =====");
+        scores.push(50);
+        console.log(scores);
+        scores.push(77);
+        console.log(scores);
+        scores.push(100,90);
+        console.log(scores);
+
+        // changing value
+        console.log("===== changing value =====");
+        console.log(scores); // [100, 50, 77, 100, 90]
+        console.log(scores.length); // 5
+        scores[0] = 60;
+        console.log(scores); // [60, 50, 77, 100, 90]
+        scores[3] = 10;
+        console.log(scores); // [60, 50, 77, 10, 90]
+        scores[7] = 70;
+        console.log(scores); //[60, 50, 77, 10, 90,,,70]
+
+        var arr2 = ["jeremy", 100, '100', true, {name:"jerome", age:20}, 2020];
+        console.log(arr2); // ["jeremy", 100, "100", true, {…}, 2020]
+
+        // Loop
+        console.log("===== Loop =====");
+        // for ex.01
+        console.log("===== for ex.01 =====");
+        for(var i=0; i < arr2.length; i++){
+            console.log(arr2[i]);
+        }
+
+        // for ex.02
+        console.log("===== for ex.02 =====");
+        var i=0;
+        for( ; i < arr2.length; i++){
+            console.log(arr2[i]);
+        }
+
+        // for ex.03
+        console.log("===== for ex.03 =====");
+        var i=0;
+        for( ; i < arr2.length; ){
+            console.log(arr2[i]);
+            i += 1; // i = i + 1;
+        }
+
+
+        console.log("===== while ex.01 =====");
+        var i=0;
+        while(i < arr2.length){
+            console.log(arr2[i]);
+            i += 1;
+        }    
+
+        console.log("===== while ex.02 =====");  
+        var i=0;
+        while(true){
+            if(i >= arr2.length)
+            {
+                break;
+            }   
+            console.log(arr2[i]);
+            i += 1;
+        }   
+
+        // Question
+        console.log("===== Question ===== ");
+        var ques =  ["jeremy", 100, '100', true, {name:"jerome", age:20}, 2020]; 
+        // Q 1. Print to Number value only (hint: while, if, typeof)
+        var i = 0;
+        while(i < ques.length){
+            // console.log(typeof ques[i]);
+            if(typeof ques[i] == 'number'){
+                console.log(ques[i]); //100, 2020
+            }
+            i++;
+        }
+
+        // Q 2. Print to String type value only
+        var i = 0;
+        while(i < ques.length){
+            // console.log(typeof ques[i]);
+            if(typeof ques[i] == 'string'){
+                console.log(ques[i]); //jeremy, 100
+            }
+            i++;
+        }
+
+
+
+    </script>
+</body>
+</html>
