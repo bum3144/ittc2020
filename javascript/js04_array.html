@@ -103,6 +103,7 @@
         console.log("===== Question ===== ");
         var ques =  ["jeremy", 100, '100', true, {name:"jerome", age:20}, 2020]; 
         // Q 1. Print to Number value only (hint: while, if, typeof)
+        console.log("===== Question 01 Answer ===== ");  
         var i = 0;
         while(i < ques.length){
             // console.log(typeof ques[i]);
@@ -113,6 +114,7 @@
         }
 
         // Q 2. Print to String type value only
+        console.log("===== Question 02 Answer ===== ");
         var i = 0;
         while(i < ques.length){
             // console.log(typeof ques[i]);
@@ -122,6 +124,20 @@
             i++;
         }
 
+        console.log("===== do ... while =====");  
+        var i = 0;
+        do{
+            console.log(ques[i]);
+            i++;
+        }while(i < ques.length)
+
+        console.log("===== for...in ===== ");  
+        for(var i in ques){
+            console.log(ques[i]);
+        }
+
+        console.log("===== forEach ===== ");        
+        ques.forEach(element => console.log(element));
 
 
     </script>
