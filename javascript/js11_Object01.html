@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js11 - Object 01</title>
+</head>
+<body>
+    <h1>Object</h1>
+    <script>
+        // object => collection of data
+        // object create syntax => new object();
+        // number, string, boolean, function, undefined, object
+        // (1) object.label = value;
+        // (2) object['label'] = value;
+
+        // 01. example => new Object();
+        var obj1 = new Object();
+        obj1.name = 'jeremy';
+        obj1.age = 22;
+        obj1.tel = '0888-1111-2222';
+        obj1['address'] = 'Cainta Rizal';  // obj1.address = 'Cainta Rizal';
+        obj1['postnum'] = 1900;
+        obj1['h1~..TT^^'] = 'What??'; //(O), obj.h1..TT^^ = 1900 (X)
+
+        console.log(obj1.name, obj1.age, obj1.tel, obj1['address'],obj1.postnum);
+        console.log(obj1['h1~..TT^^']);
+
+        // 02. example => {};
+        var obj2 = {}; // new Object();
+        obj2.name = 'Scepter';
+        obj2.age = 21;
+        obj2.working = true;
+
+        console.log(obj2.working);
+        console.log(obj2);
+
+        // o3. example => JSON - JavaScript Object Notation
+        var obj3 = {
+            name: 'David',
+            age: 20,
+            email: 'ittc@ittc.kr',
+            tel: '0111-222-3333',
+            working: true
+        };
+
+        console.log(obj3);
+    </script>
+</body>
+</html>
