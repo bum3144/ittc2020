@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factory method 02</title>
+</head>
+<body>
+    <h1>Factory method 02</h1>
+    <script>
+        function Student(name, kor, eng, math){
+            this.name = name;
+            this.kor = kor;
+            this.eng = eng;
+            this.math = math;
+        }
+
+        // Initialization - Object array -> use Student()
+        var student = [
+            new Student('jeremy', 100, 90, 80),
+            new Student('scepter', 90, 80, 70),
+            new Student('david', 80, 90, 70)
+        ];
+
+        console.log("===== forEach() =====");
+        student.forEach(function(st){
+            console.log(st.name, st.kor, st.eng, st.math);
+        });
+    </script>
+</body>
+</html>
